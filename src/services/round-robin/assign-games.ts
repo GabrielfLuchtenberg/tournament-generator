@@ -1,6 +1,10 @@
-const dummy = "no people";
+const sortRandom = (arrayOfItems: any[]) => {
+  const randomFn = () => Math.random() - 0.5;
+  return arrayOfItems.sort(randomFn);
+};
 
 const roundRobin = (peopleInTournament: string[]): string[][][] => {
+  const dummy = "no people";
   let numberOfPlayers: number = peopleInTournament.length;
   let roundsResult = [];
   if (!peopleInTournament) {
@@ -32,4 +36,4 @@ const roundRobin = (peopleInTournament: string[]): string[][][] => {
   return roundsResult;
 };
 
-export { roundRobin };
+export { roundRobin, sortRandom };
