@@ -1,16 +1,14 @@
-export type RoundRobin = [[string[]]];
-
-interface Challenger {
+export interface Challenger {
   name: String;
 }
-// export type KeyTournament = [Challenger[]];
-// export
-// // export interface RoundRobin {
-// //   challengers: ;
-// // }
-// // export interface KeyTournament {
-// //     challengers: string[]
-// // }
-// export interface TournamentKeys {
-//   challengers: any[];
-// }
+export type KeyTournament = [Challenger, Challenger];
+export interface RoundRobin {
+  challenges: KeyTournament[];
+}
+export interface Round {
+  number: number;
+  keys: KeyTournament[];
+}
+export interface TreeTournament {
+  challenges: Round[];
+}
